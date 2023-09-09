@@ -129,7 +129,6 @@ namespace ConsoleApp090923
                         Console.WriteLine("Невірний номер запиту");
                         break;
                 }
-
             } while (true);
         }
     }
