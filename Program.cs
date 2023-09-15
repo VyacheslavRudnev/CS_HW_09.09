@@ -30,6 +30,9 @@ namespace ConsoleApp090923
                 "\n4 - Показує міста, назви яких починаються з літери N і закінчуються літерою K." +
                 "\n5 - Показує міста, назви яких починаються з Ne. Результат відсортувати за спаданням." +
                 "\n6 - Завершує роботу");
+            Console.WriteLine("Всі запити обробляються двома варіантами: " +
+                               "\n1 - За допомогою звичайних методів LINQ" +
+                               "\n2 - За допомогою розширюючих методів LINQ");
 
             do
             {
@@ -52,6 +55,7 @@ namespace ConsoleApp090923
                         {
                             Console.Write($"{city} ");
                         }
+                        Console.WriteLine();
                         break;
                     case 2:
                         Console.WriteLine("Міста, назви яких починаються з літери A: ");
@@ -61,14 +65,15 @@ namespace ConsoleApp090923
                                       select city;
                         foreach (string city in CitiesA)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
                         Console.WriteLine("\nВаріант 2: ");
                         var CitiesA2 = cities.Where(city => city.StartsWith("A"));
                         foreach (string city in CitiesA2)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
+                        Console.WriteLine();
                         break;
                     case 3:
                         Console.WriteLine("Міста, назви яких закінчуються літерою M: ");
@@ -78,14 +83,15 @@ namespace ConsoleApp090923
                                       select city;
                         foreach (string city in CitiesM)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
                         Console.WriteLine("\nВаріант 2: ");
                         var CitiesM2 = cities.Where(city => city.EndsWith("m"));
                         foreach (string city in CitiesM2)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
+                        Console.WriteLine();
                         break;
                     case 4:
                         Console.WriteLine("Міста, назви яких починаються з літери N і закінчуються літерою K:");
@@ -95,14 +101,15 @@ namespace ConsoleApp090923
                                        select city;
                         foreach (string city in CitiesNK)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
                         Console.WriteLine("\nВаріант 2: ");
                         var CitiesNK2 = cities.Where(city => city.StartsWith("N") && city.EndsWith("k"));
                         foreach (string city in CitiesNK2)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
+                        Console.WriteLine();
                         break;
                     case 5:
                         Console.WriteLine("Міста, назви яких починаються з Ne. Результат відсортувано за спаданням:");
@@ -113,14 +120,15 @@ namespace ConsoleApp090923
                                        select city;
                         foreach (string city in CitiesNe)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
                         Console.WriteLine("\nВаріант 2: ");
                         var CitiesNe2 = cities.Where(city => city.StartsWith("Ne")).OrderByDescending(city => city);
                         foreach (string city in CitiesNe2)
                         {
-                            Console.WriteLine(city);
+                            Console.Write($"{city} ");
                         }
+                        Console.WriteLine();
                         break;
                     case 6:
                         Console.WriteLine("Завершення роботи");
