@@ -31,7 +31,7 @@ namespace ConsoleApp090923
             Console.WriteLine();
 
             Console.WriteLine("\nРізниця двох масивів (елементи першого масиву, яких немає у другому):");
-            Console.Write("Перший спосіб (втрачаються повторювані значення): ");
+            Console.Write("Перший спосіб (втрачаються повторювані значення в початковому масиві): ");
             var diff = arr1.Except(arr2);
             foreach (int i in diff)
             {
