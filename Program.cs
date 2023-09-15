@@ -42,6 +42,7 @@ namespace ConsoleApp090923
                         var sortUp2 = str.OrderBy(s => s.Length);
                         foreach (string s in sortUp2)
                             Console.Write(s + " ");
+                            Console.WriteLine();
                         break;
                     case 2:
                         Console.WriteLine("Сортування за спаданням:");
@@ -55,12 +56,15 @@ namespace ConsoleApp090923
                         var sortDown2 = str.OrderByDescending(s => s.Length);
                         foreach (string s in sortDown2)
                             Console.Write(s + " ");
+                            Console.WriteLine();
                         break;
                     case 3:
                         Console.WriteLine("Завершення роботи програми");
+                        Console.WriteLine();
                         return;
                     default:
                         Console.WriteLine("Невірний вибір опції");
+                        Console.WriteLine();
                         break;
                 }
             } while (true);
