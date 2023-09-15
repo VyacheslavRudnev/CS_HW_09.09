@@ -56,7 +56,7 @@ namespace ConsoleApp090923
                              where x % 8 == 0 
                              orderby x 
                              descending select x;
-
+            Console.WriteLine("Рішення виконані двома способами:\n");
             Console.WriteLine("Весь масив цілих:");
             Console.WriteLine("Варіант 1");
             foreach (int i in AllRes)
